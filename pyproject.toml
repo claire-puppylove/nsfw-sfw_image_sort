@@ -1,0 +1,18 @@
+[project]
+name = "nsfw-sfw-image-sort"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "claire-puppylove",email = "claire.puppylove.model@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "nsfw_sfw_image_sort", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
