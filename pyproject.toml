@@ -8,6 +8,8 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "nudenet[gpu] @ git+https://github.com/claire-puppylove/NudeNet.git",
+    "furry-image-model[gpu] @ git+https://github.com/claire-puppylove/furry-image-model.git"
 ]
 
 [tool.poetry]
