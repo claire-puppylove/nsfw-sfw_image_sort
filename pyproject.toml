@@ -9,12 +9,24 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "nudenet[gpu] @ git+https://github.com/claire-puppylove/NudeNet.git",
-    "furry-image-model[gpu] @ git+https://github.com/claire-puppylove/furry-image-model.git"
+    # "nudenet[gpu] @ ../NudeNet",
+    "furry-image-model[gpu] @ git+https://github.com/claire-puppylove/furry-image-model.git",
+    "pyyaml (>=6.0.3,<7.0.0)",
+    "gdown (>=6.4.2,<7.0.0)",
 ]
 
 [tool.poetry]
 packages = [{include = "nsfw_sfw_image_sort", from = "src"}]
 
+[project.scripts]
+detect_nsfw="nsfw_sfw_image_sort.detect_nsfw:main"
+download_models = "nsfw_sfw_image_sort.download_models:download_default"
+
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "onnx-diagnostic (>=0.9.3,<0.10.0)"
+]
